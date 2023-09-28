@@ -8,18 +8,8 @@ public class PermissionManager {
         // Initialize mCurrentLevel to USER by default
         mCurrentLevel = PermissionLevel.USER;
     }
-
     public String getRoleName(PermissionLevel permissionLevel) {
-        switch (permissionLevel) {
-            case ADMIN:
-                return "Admin";
-            case DEVELOPER:
-                return "Developer";
-            case USER:
-                return "User";
-            default:
-                return "Unknown";
-        }
+        return this.mCurrentLevel.getName();
     }
     public void setPermissionLevel(PermissionLevel permissionLevel) {
         mCurrentLevel = permissionLevel;
